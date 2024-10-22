@@ -658,6 +658,10 @@ html {
   height: 0.25rem;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .w-8{
   width: 2rem;
 }
@@ -702,6 +706,10 @@ html {
 
 .justify-end{
   justify-content: flex-end;
+}
+
+.justify-center{
+  justify-content: center;
 }
 
 .gap-2{
@@ -763,6 +771,10 @@ html {
 
 .pr-4{
   padding-right: 1rem;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-right{
@@ -835,6 +847,10 @@ html {
   background-color: rgb(255 255 255 / 0.05);
 }
 
+.hover\:bg-white\/10:hover{
+  background-color: rgb(255 255 255 / 0.1);
+}
+
 .hover\:text-zinc-200:hover{
   --tw-text-opacity: 1;
   color: rgb(228 228 231 / var(--tw-text-opacity));
@@ -850,6 +866,10 @@ html {
 
 .group.open .group-open\:top-2{
   top: 0.5rem;
+}
+
+.group.open .group-open\:block{
+  display: block;
 }
 
 .group.open .group-open\:-rotate-45{
