@@ -36,14 +36,27 @@
                 const itemWidth = carousel.getElementsByTagName("div")[0].clientWidth;
                 carousel.scrollLeft = carousel.scrollLeft + itemWidth;
             });
+            const darkModeToggle = document.getElementById("dark-mode-toggle");
+            darkModeToggle.addEventListener("click", () => {
+                if (document.body.classList.contains("dark")) {
+                    document.body.classList.remove("dark")
+                } else {
+                    document.body.classList.add("dark")
+                }
+            })
         }
     </script>
 </head>
 
-<body>
-    <main>
+<body class="dark">
+    <main class="bg-zinc-200 dark:bg-zinc-900">
         <header class="text-zinc-200">
-            <nav class="sticky top-0 bg-gradient-to-r from-rose-500 to-pink-500">
+            <div id="dark-mode-toggle"
+                class="fixed top-24 right-0 inline-block w-12 cursor-pointer rounded-l-lg bg-zinc-900 dark:bg-zinc-200 text-zinc-200 dark:text-zinc-900 p-2 text-3xl">
+                <i class="fa-solid fa-sun dark:hidden"></i>
+                <i class="fa-solid fa-moon hidden dark:inline"></i>
+            </div>
+            <nav class="sticky-z-10 top-0 bg-gradient-to-r from-rose-500 to-pink-500">
                 <div class="flex items-center p-2 gap-2">
                     <img src="./assets/images/logo-inverted.png" width="50">
                     <div class="text-2xl font-bold">
@@ -153,7 +166,7 @@
                 </form>
             </div>
         </header>
-        <div class="max-w-screen-lg mx-auto mt-20">
+        <div class="max-w-screen-lg mx-auto mt-20 text-zinc-900 dark:text-zinc-200">
             <h2 class="text-5xl">
                 Headliners
             </h2>
