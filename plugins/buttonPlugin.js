@@ -6,7 +6,7 @@ const buttonPlugin = plugin(function ({
   matchComponents,
   theme,
 }) {
-  console.log(theme("spacing")["0.5"]);
+  console.log(theme("spacing")[0.5]);
   addComponents({
     ".btn": {
       display: "inline-block",
@@ -16,7 +16,6 @@ const buttonPlugin = plugin(function ({
       borderRadius: theme("borderRadius").lg,
     },
   });
-
   console.log(theme("colors"));
   for (let key in theme("colors")) {
     if (typeof theme("colors")[key] !== "string") {
@@ -24,14 +23,13 @@ const buttonPlugin = plugin(function ({
         const colorType = lightOrDarkColor(theme("colors")[key][shade]);
         addComponents({
           [`.btn-${key}-${shade}`]: {
-            backgroundColor: theme("colors")[key][shade],
+            background: theme("colors")[key][shade],
             color: colorType === "dark" ? "white" : "black",
           },
         });
       }
     }
   }
-
   matchComponents({
     btn: (value) => {
       return {
